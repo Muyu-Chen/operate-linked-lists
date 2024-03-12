@@ -13,7 +13,7 @@ int reverseTwoElements(int position1, int position2, defnode* head);
 defnode* mergeSortedLists(defnode* list1, defnode* list2);
 defnode* makeLinkedList_int(int firstData, int gap, int quantity, defnode* nextnode);//the beginning data, the gap, quanitity of the list, inserted in which node
 defnode* reverseLinkedList(defnode* head);
-int insert(char direction, int inputNumber, defnode* head);/*ÉıĞò£º(a/+)ascending order; ½µĞò£º(d/-)descending order */
+int insert(char direction, int inputNumber, defnode* head);/*å‡åºï¼š(a/+)ascending order; é™åºï¼š(d/-)descending order */
 
 int main()
 {
@@ -23,39 +23,39 @@ int main()
 	defnode* headNode4 = (defnode*)malloc(sizeof(defnode));
 	defnode* headNode5 = (defnode*)malloc(sizeof(defnode));
 	if (headNode == NULL || headNode2 == NULL || headNode3 == NULL || headNode4 == NULL || headNode5 == NULL) return 1;
-	headNode->next = makeLinkedList_int(1, 2, 8, NULL);//´´½¨´Ó1¿ªÊ¼£¬¹«²îÎª2£¬ÏîÊıÎª8µÄÁ´±í£¨Á´½Óµ½NULLÇ°£©
-	headNode2->next = makeLinkedList_int(2, 2, 8, NULL);//´´½¨´Ó1¿ªÊ¼£¬¹«²îÎª2£¬ÏîÊıÎª8µÄÁ´±í£¨Á´½Óµ½NULLÇ°£©
+	headNode->next = makeLinkedList_int(1, 2, 8, NULL);//åˆ›å»ºä»1å¼€å§‹ï¼Œå…¬å·®ä¸º2ï¼Œé¡¹æ•°ä¸º8çš„é“¾è¡¨ï¼ˆé“¾æ¥åˆ°NULLå‰ï¼‰
+	headNode2->next = makeLinkedList_int(2, 2, 8, NULL);//åˆ›å»ºä»1å¼€å§‹ï¼Œå…¬å·®ä¸º2ï¼Œé¡¹æ•°ä¸º8çš„é“¾è¡¨ï¼ˆé“¾æ¥åˆ°NULLå‰ï¼‰
 	headNode3->next = makeLinkedList_int(1, 2, 8, NULL);
 
 	headNode4->next = makeLinkedList_int(0, 2, 8, NULL);
 	headNode5->next = makeLinkedList_int(2, 4, 6, NULL);
-	printf("´´½¨´Ó1¿ªÊ¼£¬¹«²îÎª2£¬ÏîÊıÎª8µÄÁ´±í: \n"); printLinkedList(headNode);
+	printf("åˆ›å»ºä»1å¼€å§‹ï¼Œå…¬å·®ä¸º2ï¼Œé¡¹æ•°ä¸º8çš„é“¾è¡¨: \n"); printLinkedList(headNode);
 
-	insert('+', 6, headNode); //ÉıĞòÁĞ±íÖĞ²åÈë6
-	printf("ÉıĞòÁĞ±íÖĞ²åÈë6: \n"); printLinkedList(headNode);
+	insert('+', 6, headNode); //å‡åºåˆ—è¡¨ä¸­æ’å…¥6
+	printf("å‡åºåˆ—è¡¨ä¸­æ’å…¥6: \n"); printLinkedList(headNode);
 
-	headNode->next = reverseLinkedList(headNode->next); //·´×ªÁĞ±í
-	printf("·´×ªÁĞ±í: \n"); printLinkedList(headNode);
+	headNode->next = reverseLinkedList(headNode->next); //åè½¬åˆ—è¡¨
+	printf("åè½¬åˆ—è¡¨: \n"); printLinkedList(headNode);
 
-	insert('-', 7, headNode); //½µĞòÁĞ±íÖĞ²åÈë8
-	printf("½µĞòÁĞ±íÖĞ²åÈë7: \n"); printLinkedList(headNode);
+	insert('-', 7, headNode); //é™åºåˆ—è¡¨ä¸­æ’å…¥8
+	printf("é™åºåˆ—è¡¨ä¸­æ’å…¥7: \n"); printLinkedList(headNode);
 
-	reverseTwoElements(5, 2, headNode); //ÊäÈë¿ÉÒÔ²»°´Ë³ĞòÊäÈë£¬¿ÉÒÔ¸ô¼¸¸öÔªËØÄæÖÃ
-	printf("ÄæÖÃµÚ5£¬2¸öÔªËØ: \n"); printLinkedList(headNode);
+	reverseTwoElements(5, 2, headNode); //è¾“å…¥å¯ä»¥ä¸æŒ‰é¡ºåºè¾“å…¥ï¼Œå¯ä»¥éš”å‡ ä¸ªå…ƒç´ é€†ç½®
+	printf("é€†ç½®ç¬¬5ï¼Œ2ä¸ªå…ƒç´ : \n"); printLinkedList(headNode);
 
-	printf("ºÏ²¢Á½¸öÁĞ±í£¬·Ö±ğÏÔÊ¾ÎªÁĞ±í1£¬ÁĞ±í2£¬ºÏ²¢ºóµÄÁĞ±í: \n"); 
+	printf("åˆå¹¶ä¸¤ä¸ªåˆ—è¡¨ï¼Œåˆ†åˆ«æ˜¾ç¤ºä¸ºåˆ—è¡¨1ï¼Œåˆ—è¡¨2ï¼Œåˆå¹¶åçš„åˆ—è¡¨: \n"); 
 	printLinkedList(headNode2); 	printLinkedList(headNode3);
 	mergeSortedLists(headNode3->next, headNode2->next);
 	printLinkedList(headNode3);
 
-	printf("Çó²¢¼¯£º¼´ºÏ²¢Á½¸ö¼¯ºÏ²¢É¾³ıÖØ¸´ÔªËØ£¨Ê¹ÓÃµÄÇ°ÃæºÏ²¢ºóµÄ£©: \n");
+	printf("æ±‚å¹¶é›†ï¼šå³åˆå¹¶ä¸¤ä¸ªé›†åˆå¹¶åˆ é™¤é‡å¤å…ƒç´ ï¼ˆä½¿ç”¨çš„å‰é¢åˆå¹¶åçš„ï¼‰: \n");
 	//add some values which are duplicated
 	insert('+', 2, headNode3); insert('+', 2, headNode3); insert('+', 5, headNode3); insert('+', 5, headNode3); 	insert('+', 7, headNode3);
 	printLinkedList(headNode3);
 	removeDuplicates(headNode3->next);
 	printLinkedList(headNode3);
 
-	printf("Çó½»¼¯£¨Ç°Á½¸öÎªÁ½¸ö¼¯ºÏ£¬µÚÈı¸öÎª½»¼¯£©\n¿ÉÒÔÍêÃÀ´¦ÀíÔ­±¾²»ÊÇ¼¯ºÏµÄÁ´±í£¨¼´ÔªËØÓĞÖØ¸´µÄÁ´±í£©: \n");
+	printf("æ±‚äº¤é›†ï¼ˆå‰ä¸¤ä¸ªä¸ºä¸¤ä¸ªé›†åˆï¼Œç¬¬ä¸‰ä¸ªä¸ºäº¤é›†ï¼‰\nå¯ä»¥å®Œç¾å¤„ç†åŸæœ¬ä¸æ˜¯é›†åˆçš„é“¾è¡¨ï¼ˆå³å…ƒç´ æœ‰é‡å¤çš„é“¾è¡¨ï¼‰: \n");
 	defnode* intersectionHead;
 	insert('+', 6, headNode4);	insert('+', 6, headNode5);
 	printLinkedList(headNode4);	printLinkedList(headNode5);
