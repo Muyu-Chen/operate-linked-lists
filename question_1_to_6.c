@@ -62,7 +62,7 @@ int main()
 	intersectionHead = findIntersection(headNode4, headNode5);
 	removeDuplicates(intersectionHead->next);
 	printLinkedList(intersectionHead);
-
+	free(headNode); free(headNode2); free(headNode3); free(headNode4); free(headNode5);
 	return 0;
 }
 
